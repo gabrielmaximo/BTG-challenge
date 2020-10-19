@@ -1,4 +1,4 @@
-interface SessionDTO {
+export default interface SessionDTO {
   login: {
     email: string,
     token: string

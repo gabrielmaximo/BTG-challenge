@@ -1,30 +1,27 @@
 import CustomException from '../exception/CustomException';
 import cpfValidator from '../util/cpfValidator'
 import IDocumentRepository from '../repository/IDocumentRepository'
-import { isValid, parseISO } from 'date-fns'
+import DocumentDTO from '../dto/DocumentDTO';
 
 class DocumentService {
   constructor(
     private documentRepository: IDocumentRepository,
   ) { }
 
-  createDocument(request: DocumentDTO): DocumentDTO {
-    if (Object.keys(request).length < 4)
-      throw new CustomException('Property missing!')
+  createDocument({ birthDate, cpf, fullName, rg }: DocumentDTO): DocumentDTO {
+    const parsedCpf = cpf.replace(/[\s.-]*/igm, '')
+    const parsedRg = rg.replace(/[\s.-]*/igm, '')
 
-    const cpf = request.cpf.replace(/[\s.-]*/igm, '')
-    const rg = request.rg.replace(/[\s.-]*/igm, '')
-
-    if (!cpfValidator(cpf))
+    if (!cpfValidator(parsedCpf))
       throw new CustomException("Invalid cpf!")
-    if (rg.length !== 9)
+    if (parsedRg.length !== 9)
       throw new CustomException("Invalid rg!")
 
     const parsedDocument = {
-      fullName: request.fullName,
-      birthDate: request.birthDate,
-      cpf,
-      rg
+      fullName: fullName,
+      birthDate: birthDate,
+      cpf: parsedCpf,
+      rg: parsedRg
     }
 
     this.documentRepository.store(parsedDocument)

@@ -5,10 +5,12 @@ import DocumentService from '../service/DocumentService'
 const DocumentController = Router()
 
 DocumentController.post('/', (req, res) => {
-  const document = new DocumentService(new DocumentRepository)
-    .createDocument(req.body)
+  const doc: DocumentDTO = req.body
 
-  return res.json(document)
+  const document = new DocumentService(new DocumentRepository)
+    .createDocument(doc)
+
+  return res.status(201).json(document)
 })
 
 export default DocumentController

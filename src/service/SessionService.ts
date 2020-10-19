@@ -2,6 +2,7 @@ import authConfig from '../config/jwt'
 import { sign } from 'jsonwebtoken'
 import CustomException from '../exception/CustomException';
 import { validate } from 'email-validator'
+import SessionDTO from '../dto/SessionDTO';
 
 class SessionService {
 

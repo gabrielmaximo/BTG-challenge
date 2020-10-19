@@ -1,6 +1,6 @@
 {
   "fullName": "Luis Gabriel Maximo",
-  "birthDate": "2020-10-19T00: 02: 47-03: 00",
+  "birthDate": "1997-07-23",
   "cpf": "91265994064",
   "rg": "497567696"
 }

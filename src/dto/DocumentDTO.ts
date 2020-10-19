@@ -1,6 +1,6 @@
-interface DocumentDTO {
+export default interface DocumentDTO {
   fullName: string,
-  birthDate: string,
+  birthDate: Date,
   cpf: string,
   rg: string
 }
