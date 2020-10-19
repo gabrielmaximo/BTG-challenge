@@ -58,6 +58,7 @@ Desenvolvendo um serviço web REST com 2 funcionalidades:
    **obs:** O password pode ser qualquer valor com no minimo 6 caracters e o email precisa ser valido. Ex: seu_email@gmail.com
    
    - Para armazenar um documento em disco use http://localhost:3333/document - ```POST```
+   - Header: Bearer Token
    - Payload:
    ```json
    {
