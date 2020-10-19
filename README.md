@@ -33,7 +33,7 @@ Desenvolvendo um serviço web REST com 2 funcionalidades:
      {
        "login": {
          "email": "maximou@fu.br",
-         "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MDMwODAwMDQsImV4cCI6MTYwMzY4NDgwNCwic3ViIjoibWF4aW1vdUBmdS5iciJ9.    R46HW4BBM3u_t6xTHYG7NjHEmjZjbwnvlIF9pz8MQ7U"
+         "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MDMwODAwMDQsImV4cCI6MTYwMzY4NDgwNCwic3ViIjoibWF4aW1vdUBmdS5iciJ9.R46HW4BBM3u_t6xTHYG7NjHEmjZjbwnvlIF9pz8MQ7U"
        },
        "ip": "127.0.0.1"
      }
