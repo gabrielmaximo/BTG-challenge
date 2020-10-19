@@ -7,11 +7,11 @@ Desenvolvendo um serviço web REST com 2 funcionalidades:
 - node (latest)
 - yarn or npm (latest)
 
-## 1. Endpoint para autenticação do serviço;
+### 1. Endpoint para autenticação do serviço;
 
 - Login feito em memoria;
 
-## 2. Endpoint para geração do documento com os dados inputados pelo usuário e salvar no disco
+### 2. Endpoint para geração do documento com os dados inputados pelo usuário e salvar no disco
 
 - Dados: Nome Completo, Data de Nascimento, CPF, RG;
 - Documento salvo em formato .txt dentro da pasta tmp com os dados escritos no seguinte formato:
@@ -40,16 +40,16 @@ Desenvolvendo um serviço web REST com 2 funcionalidades:
   }
   ```
 
-## 3. Testes implementados com 100% de coverage.
+### 3. Testes implementados com 100% de coverage.
 
 - Podem ser consultados atraves do coverage report do jest no caminho: `src/__tests__/coverage/lcov-report/index.html` (abrir com navegador)
 - Para visualizar via bash basta executar o comando `yarn test` (equivalente a `npm run test`)
 
-## 4. Para startar o servidor:
+### 4. Para startar o servidor:
 
 - `yarn dev` ou `npm run dev`
 
-## 5. Documentação de rotas:
+### 5. Documentação de rotas:
 
 - Para fazer authenticação use http://localhost:3333/session - `POST`
 - Payload:
