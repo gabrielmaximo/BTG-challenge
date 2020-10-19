@@ -1,10 +1,12 @@
 import { Router } from 'express'
-import documentService from '../service/DocumentService'
+import DocumentRepository from '../repository/impl/DocumentRepository'
+import DocumentService from '../service/DocumentService'
 
 const DocumentController = Router()
 
 DocumentController.post('/', (req, res) => {
-  const document = documentService.createDocument(req.body)
+  const document = new DocumentService(new DocumentRepository)
+    .createDocument(req.body)
 
   return res.json(document)
 })

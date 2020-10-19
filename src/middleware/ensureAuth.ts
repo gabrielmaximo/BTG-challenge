@@ -3,11 +3,11 @@ import { verify } from 'jsonwebtoken';
 import authConfig from '../config/jwt';
 import CustomException from '../exception/CustomException';
 
-export default function ensureAuthenticated(
+export default (
   req: Request,
   res: Response,
   next: NextFunction,
-): void {
+) => {
   const authHeader = req.headers.authorization;
 
   if (!authHeader) {

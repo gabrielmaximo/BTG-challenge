@@ -5,7 +5,7 @@ import { validate } from 'email-validator'
 
 class SessionService {
 
-  createSession(email: string, password: string): LoginDTO {
+  createSession(email: string, password: string, ip: string): SessionDTO {
     if (password.length < 6) throw new CustomException("Invalid password!")
 
     if (!validate(email)) throw new CustomException("Invalid email!")
@@ -17,8 +17,8 @@ class SessionService {
       expiresIn,
     });
 
-    return { email, token }
+    return { login: { email, token }, ip: ip === "::1" ? "127.0.0.1" : ip }
   }
 }
 
-export default new SessionService()
+export default SessionService

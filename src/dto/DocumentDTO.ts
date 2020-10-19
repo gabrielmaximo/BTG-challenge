@@ -1,6 +1,6 @@
 interface DocumentDTO {
   fullName: string,
-  birthDate: Date,
+  birthDate: string,
   cpf: string,
   rg: string
 }
